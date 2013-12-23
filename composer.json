@@ -1,0 +1,29 @@
+{
+    "name": "sica07/fspdiscuss",
+    "description": "A very simple forum ZF2 module based on EvanDotPro/EdpDiscuss",
+    "type": "library",
+    "keywords": [
+        "zf2"
+    ],
+    "homepage": "https://github.com/sica07/FSPDiscuss",
+    "authors": [
+        {
+            "name": "Evan Coury",
+            "email": "me@evancoury.com",
+            "homepage": "http://blog.evan.pro/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "zendframework/zendframework": "2.*",
+        "zf-commons/zfc-base": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "FSPDiscuss": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
