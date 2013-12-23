@@ -35,14 +35,14 @@ class Module
             ),
             'factories' => array(
                 'fspdiscuss_discuss_service' => function($sm) {
-                    $service = new \fspDiscuss\Service\Discuss;
+                    $service = new \FSPDiscuss\Service\Discuss;
                     $service->setThreadMapper($sm->get('fspdiscuss_thread_mapper'))
                             ->setMessageMapper($sm->get('fspdiscuss_message_mapper'))
                             ->setTagMapper($sm->get('fspdiscuss_tag_mapper'));
                     return $service;
                 },
                 'fspdiscuss_thread_mapper' => function($sm) {
-                    $mapper = new \fspDiscuss\Model\Thread\ThreadMapper;
+                    $mapper = new \FSPDiscuss\Model\Thread\ThreadMapper;
                     //$threadModelClass = static::getOption('thread_model_class');
                     $threadModelClass = Module::getOption('thread_model_class');
                     $mapper->setEntityPrototype(new $threadModelClass);
@@ -51,7 +51,7 @@ class Module
 
                 },
                 'fspdiscuss_tag_mapper' => function($sm) {
-                    $mapper = new \fspDiscuss\Model\Tag\TagMapper;
+                    $mapper = new \FSPDiscuss\Model\Tag\TagMapper;
                     //$tagModelClass = static::getOption('tag_model_class');
                     $tagModelClass = Module::getOption('tag_model_class');
                     $mapper->setEntityPrototype(new $tagModelClass);
@@ -59,7 +59,7 @@ class Module
                     return $mapper;
                 },
                 'fspdiscuss_message_mapper' => function($sm) {
-                    $mapper = new \fspDiscuss\Model\Message\MessageMapper;
+                    $mapper = new \FSPDiscuss\Model\Message\MessageMapper;
                     //$messageModelClass = static::getOption('message_model_class');
                     $messageModelClass = Module::getOption('message_model_class');
                     $mapper->setEntityPrototype(new $messageModelClass);
@@ -67,15 +67,15 @@ class Module
                     return $mapper;
                 },
                 'fspdiscuss_message' => function ($sm) {
-                    $message = new \fspDiscuss\Model\Message\Message;
+                    $message = new \FSPDiscuss\Model\Message\Message;
                     return $message;
                 },
                 'fspdiscuss_form' => function ($sm) {
-                    $form = new \fspDiscuss\Form\PostForm;
+                    $form = new \FSPDiscuss\Form\PostForm;
                     return $form;
                 },
                 'fspdiscuss_thread_form' => function ($sm) {
-                    $form = new \fspDiscuss\Form\PostThread;
+                    $form = new \FSPDiscuss\Form\PostThread;
                     return $form;
                 },
             ),
@@ -89,7 +89,7 @@ class Module
             ),
 
 
-            //'fspDiscuss\Service\Discuss' => array(
+            //'FSPDiscuss\Service\Discuss' => array(
             //    'parameters' => array(
             //        'threadMapper'  => 'fspdiscuss_thread_mapper',
             //        'messageMapper' => 'fspdiscuss_message_mapper',
