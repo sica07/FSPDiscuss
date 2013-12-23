@@ -1,6 +1,6 @@
-EdpDiscuss
+FSPDiscuss
 ========
-Version 0.0.1
+Version 0.0.2
 
 Requirements
 ------------
@@ -23,10 +23,11 @@ Installation
 Post Installation 
 -----------------
 
-Import the SQL schema located in `./vendor/EdpDiscuss/data/schema.sql`.
+Import the SQL schema located in `./vendor/FSPDiscuss/data/schema.sql`.
 
 
 Introduction
 ------------
-EdpDiscuss is a module for Zend Framework 2.
+FSPDiscuss is a module for Zend Framework 2 based on EdpDiscuss and modified to suit the needs for
+FSPlaza app.
 
